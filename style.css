@@ -140,38 +140,47 @@ body {
   background-color: var(--dark);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .container {
-  font-size: 0;
   width: 600px;
-  margin: 0 auto;
   height: 300px;
+  margin: 3em auto;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .container > div {
   display: inline-block;
-  font-size: 1rem;
-  width: 50%;
+  margin: 0;
+  vertical-align: middle;
+  white-space: normal;
 }
-/* .text {
-  width: 100%;
-} */
 
-/* .image img {
-  width: 100%;
-} */
+.container .right,
+.container .image {
+  width: 50%;
+  height: inherit;
+}
 
 .image {
   height: 100%;
   background-image: url(./image/Soap-bubbles-MaxPixel.net_.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .right {
-  height: 100%;
-  box-sizing: border-box;
   background-color: white;
   padding: 1em;
+  position: relative;
+}
+.right .wrapper {
+  position: absolute;
+  width: 100%;
 }
 
 .right img {
@@ -196,11 +205,11 @@ form {
 }
 
 form input {
-  box-sizing: border-box;
   margin-bottom: 1em;
   border: 1px solid lightgray;
   width: 60%;
   padding: 0.5em;
+  display: block;
 }
 
 button {
