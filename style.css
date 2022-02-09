@@ -147,14 +147,15 @@ body {
 .container {
   width: 600px;
   height: 300px;
-  margin: 3em auto;
+  margin: 0 auto;
   overflow: hidden;
   white-space: nowrap;
+  font-size: 0;
 }
 
 .container > div {
   display: inline-block;
-  margin: 0;
+  font-size: 1rem;
   vertical-align: middle;
   white-space: normal;
 }
